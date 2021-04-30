@@ -83,7 +83,7 @@ function getEntertainment () {
     let randEntertainment = entertainment[randNum];
     let userConfirm = '';
     if(randEntertainment !== entertainmentNotWanted){
-       userConfirm = prompt(`Your entertainment is ${randEntertainment}, Is this destination exceptable? (y/n):`);
+       userConfirm = prompt(`Your entertainment is ${randEntertainment}, Is this entertainment exceptable? (y/n):`);
     }
     if (userConfirm == "y") {
     confirmed = true;
