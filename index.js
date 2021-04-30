@@ -6,11 +6,12 @@
 
 // created our arrays 
 
-let destinations = ["Bisbee", "Tombstone", "Flagstaff", "Williams", "Yuma"]
-let restaurants = ["Fast-Food", "Fine-Dining","MomandPop"]
-let transportation = ["Bus", "Pesonal", "Rental", "Carpool"]
-let entertainment = ["Tourist-site", 'Show', 'Urban-Exploration', "Trainride", "Hiking"]
+let destinations = ["Bisbee", "Tombstone", "Flagstaff", "Williams", "Yuma"];
+let restaurants = ["Fast-Food", "Fine-Dining","Mom and Pop"];
+let transportation = ["Bus", "Pesonal Vehicle", "Rental Car", "Carpool"];
+let entertainment = ["Tourist-site", 'Show', 'Urban-Exploration', "Trainride", "Hiking"];
 
+// function for pulling a random destination
 function getDestination () {
   let confirmed = false;
   while(confirmed === false){
@@ -24,7 +25,7 @@ function getDestination () {
     } 
   }
 }
-
+// function for pulling a random restaurants
 function getRestaurants () {
   let confirmed = false;
   while(confirmed === false){
@@ -39,6 +40,7 @@ function getRestaurants () {
   }
 }
 
+// function for pulling the trasportation
 function getTransportation () {
   let confirmed = false;
   while(confirmed === false){
@@ -53,6 +55,7 @@ function getTransportation () {
   }
 }
 
+// function for pulling the entertainment
 function getEntertainment () {
   let confirmed = false;
   while(confirmed === false){
@@ -66,7 +69,7 @@ function getEntertainment () {
     } 
   }
 }
-
+// Ending function that puts it all together. 
 function getTrip () {
   let confirmed = false;
   while(confirmed === false){
