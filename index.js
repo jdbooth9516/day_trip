@@ -14,7 +14,7 @@ let entertainment = ["Tourist-site", 'Show', 'Urban-Exploration', "Trainride", "
 function getDestination () {
   let confirmed = false;
   while(confirmed === false){
-    let randNum = Math.floor(Math.random() * 5);
+    let randNum = Math.floor(Math.random() * destinations.length);
     let randDestinations = destinations[randNum];
     let userConfrim = prompt(`Your destination is ${randDestinations}, Is this destination exceptable? (y/n):`);
 
@@ -28,13 +28,13 @@ function getDestination () {
 function getRestaurants () {
   let confirmed = false;
   while(confirmed === false){
-    let randNum = Math.floor(Math.random() * 5);
+    let randNum = Math.floor(Math.random() * restaurants.length);
     let randRestaurants = restaurants[randNum];
     let userConfrim = prompt(`Your restaurants is ${randRestaurants}, Is this restaurant exceptable? (y/n):`);
 
     if (userConfrim == "y") {
     confirmed = true;
-    return randRestaurant;
+    return randRestaurants;
     } 
   }
 }
@@ -42,7 +42,7 @@ function getRestaurants () {
 function getTransportation () {
   let confirmed = false;
   while(confirmed === false){
-    let randNum = Math.floor(Math.random() * 5);
+    let randNum = Math.floor(Math.random() * transportation.length);
     let randTrasportation = transportation[randNum];
     let userConfrim = prompt(`Your trasportation is ${randTrasportation}, Is this trasportaion exceptable? (y/n):`);
 
@@ -56,7 +56,7 @@ function getTransportation () {
 function getEntertainment () {
   let confirmed = false;
   while(confirmed === false){
-    let randNum = Math.floor(Math.random() * 5);
+    let randNum = Math.floor(Math.random() * entertainment.length);
     let randEntertainment = entertainment[randNum];
     let userConfrim = prompt(`Your destination is ${randEntertainment}, Is this destination exceptable? (y/n):`);
 
@@ -66,4 +66,22 @@ function getEntertainment () {
     } 
   }
 }
+
+function getTrip () {
+  let confirmed = false;
+  while(confirmed === false){
+    let destination = getDestination();
+    let restaurant = getRestaurants();
+    let transport = getTransportation();
+    let entertainment = getEntertainment();
+    let userConfirm = prompt(`This is your trip ${destination}, ${restaurant}, ${transport}, ${entertainment}. Confirm your trip? (y/n):`)
+
+    if(userConfirm == 'y'){
+      confirmed = true;
+      console.log(`Your trip of ${destination}, ${restaurant}, ${transport}, ${entertainment} Has been confirmed have a good trip.`)
+    }
+  }
+}
+
+getTrip();
 
